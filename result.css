@@ -1,0 +1,126 @@
+.rcard {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 520px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 32px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  margin-top: 10px;
+}
+@media only screen and (max-width:767px) {
+  .rcard{
+    width: 335px;
+    /* left: 0; */
+    margin: 2px;
+  }
+  
+}
+#foot{
+  height: 30px;
+  margin:11px;
+}
+.rufoot{
+  position: relative;
+  bottom: 0px;
+}
+@media only screen and (max-width:767px) {
+  .rufoot{
+ width: 0;
+ height: 0;
+  }
+}
+.rcontent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  color: black;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.rcontent .heading {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.rcontent .para {
+  line-height: 1.5;
+}
+
+.rcontent .btn {
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.rcard::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+  z-index: -1;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.rcard:hover::before {
+  height: 100%;
+}
+
+.rcard:hover {
+  box-shadow: none;
+}
+
+.rcard:hover .btn {
+  color: #212121;
+  background: #e8e8e8;
+}
+
+.rcontent .btn:hover {
+  outline: 2px solid #e8e8e8;
+  background: transparent;
+  color: #e8e8e8;
+}
+
+.rcontent .btn:active {
+  box-shadow: none;
+}
+
+  
+  .rimg{
+    vertical-align:middle;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    border: none;
+    aspect-ratio: 16/9;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
+  }
+  .rimg:hover {
+    border-radius: 20px;
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
+    /* background: #FD5655; */
+  }
+  #result{
+    /* background-color: whitesmoke; */
+    border-top: solid white 10px;
+  }
